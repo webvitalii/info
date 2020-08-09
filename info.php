@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/plugins/info/
 Description: Plugin shows in the admin bar the number of SQL queries, the amount of time in seconds and memory load.
 Version: 2.4
 Author: webvitaly
-Author URI: http://web-profile.com.ua/wordpress/plugins/
+Author URI: http://web-profile.net/wordpress/plugins/
 License: GPLv3
 */
 
@@ -37,7 +37,7 @@ if ( !function_exists( 'info_plugin_admin_bar' ) ) {
 			memory_get_peak_usage() / 1024 / 1024
 		);
 		echo "\n".'<!-- Debug info: '.$useful_info.' -->'."\n";
-		echo '<!-- info plugin v.2.3 wordpress.org/plugins/info/ -->'."\n";
+		echo '<!-- info plugin v.2.4 wordpress.org/plugins/info/ -->'."\n";
 	}
 	add_action('wp_footer', 'info_plugin_code');
 
@@ -45,9 +45,8 @@ if ( !function_exists( 'info_plugin_admin_bar' ) ) {
 	function info_plugin_plugin_meta( $links, $file ) {
 		if ( $file == plugin_basename( __FILE__ ) ) {
 			$row_meta = array(
-				'support' => '<a href="http://web-profile.com.ua/wordpress/plugins/info/" target="_blank"><span class="dashicons dashicons-editor-help"></span> ' . __( 'info', 'info' ) . '</a>',
-				'donate' => '<a href="http://web-profile.com.ua/donate/" target="_blank"><span class="dashicons dashicons-heart"></span> ' . __( 'Donate', 'info' ) . '</a>',
-				'pro' => '<a href="http://codecanyon.net/item/silver-bullet-pro/15171769?ref=webvitalii" target="_blank" title="Speedup and protect WordPress in a smart way"><span class="dashicons dashicons-star-filled"></span> ' . __( 'Silver Bullet Pro', 'info' ) . '</a>'
+				'support' => '<a href="http://web-profile.net/wordpress/plugins/info/" target="_blank">' . __( 'info', 'info' ) . '</a>',
+				'donate' => '<a href="http://web-profile.net/donate/" target="_blank">' . __( 'Donate', 'info' ) . '</a>'
 			);
 			$links = array_merge( $links, $row_meta );
 		}
